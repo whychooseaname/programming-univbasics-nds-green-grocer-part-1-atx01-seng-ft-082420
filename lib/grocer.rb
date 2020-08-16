@@ -13,7 +13,6 @@ end
 def consolidate_cart(cart)
   bagged_items=[]
   cart.each do |item|
-    #binding.pry
     lookup = find_item_by_name_in_collection(item[:item] , bagged_items);
     if lookup == nil 
       item[:count] = 1
